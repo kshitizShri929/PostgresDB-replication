@@ -1,0 +1,2 @@
+# PostgresDB-replication
+master slave
