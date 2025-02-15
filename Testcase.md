@@ -1,40 +1,41 @@
-6.1 Master-Slave Synchronization
+ ## 1 Master-Slave Synchronization
 
-Given the master node is running and the slave node is configured correctly,
+**Given:** The master node is running and the slave node is configured correctly,
 
-When a new record is inserted into the master database,
+**When:** A new record is inserted into the master database,
 
-Then the record should appear in the slave database within the replication delay.
+**Then:** The record should appear in the slave database within the replication delay.
 
-6.2 Read Query Redirection
+## 2 Read Query Redirection
 
-Given a master-slave replication setup is active,
+**Given:** A master-slave replication setup is active,
 
-When a read query is sent to the slave,
+**When:** A read query is sent to the slave,
 
-Then the query should return the expected data from the replicated database.
 
-6.3 Failover Management
+**Then:** The query should return the expected data from the replicated database.
 
-Given a master node failure occurs,
+## 3 Failover Management
 
-When the replication monitoring tool detects the failure,
+**Given:** A master node failure occurs,
 
-Then a failover mechanism should promote the slave to master automatically.
+**When:** The replication monitoring tool detects the failure,
 
-6.4 Network Interruption Handling
+**Then:** A failover mechanism should promote the slave to master automatically.
 
-Given an active replication setup,
+## 4 Network Interruption Handling
 
-When the network connection between master and slave is lost,
+**Given:** An active replication setup,
 
-Then the slave should resume synchronization once connectivity is restored without data loss.
+**When:** The network connection between master and slave is lost,
 
-6.5 Performance Testing
+**Then:** The slave should resume synchronization once connectivity is restored without data loss.
 
-Given a heavy workload on the master node,
+## 5 Performance Testing
 
-When read queries are redirected to the slave,
+**Given:** A heavy workload on the master node,
 
-Then the system should handle increased read traffic efficiently without significant delays.
+**When:** Read queries are redirected to the slave,
+
+**Then:** The system should handle increased read traffic efficiently without significant delays.
 
